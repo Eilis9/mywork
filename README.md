@@ -1,5 +1,3 @@
 # mywork
-My work files 
-Task 1 - week 1
-    Task 1 "Hello World!"
-
+# H1 My work
+## H2 Task 1 prints  **Hello World!**
