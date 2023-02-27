@@ -5,18 +5,18 @@ Week 5 lab extra (no.6)
 """
 
 #structure - list of dictionaries
-students = [
+# students = [
             
-            {"name":"student1name", "modules":
-                 [{"coursename" : "english", "grade" : 50}]
-            },
+#             {"name":"student1name", "modules":
+#                  [{"coursename" : "english", "grade" : 50}]
+#             },
                 
             
-            {"name":"student2name",      "modules" : 
-                 [{"coursename" : "english", "grade" : 60}]
-            }
+#             {"name":"student2name",      "modules" : 
+#                  [{"coursename" : "english", "grade" : 60}]
+#             }
 
-          ]      
+#           ]      
 # initialise students as a list    
 students = []
 # initialise student_name to start loop
