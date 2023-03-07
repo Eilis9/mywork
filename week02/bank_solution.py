@@ -14,11 +14,11 @@ input2 = int(input("Enter amount2(in cent): "))
 total_cent = input1 + input2
 
 # Convert total to a string type so that slicing can be applied
-total_cent_str = str(total_cent)
+total_cent = str(total_cent)
 # Last 2 digits of the string is the cent amount and everything else is euro.
 # This avoids float types and need for leading zeroes when using // and % 
-euro_amount = total_cent_str[:-2]
-cent_amount = total_cent_str[-2:]
+euro_amount = total_cent[:-2]
+cent_amount = total_cent[-2:]
 
 # Output the amount 
 print(f"The sum of these is €{euro_amount}.{cent_amount}")
