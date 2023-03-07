@@ -6,7 +6,7 @@ Adds these and outputs the answer in euro and cent
 '''
 
 
-# Prompt user for input
+# Prompt user for inputs
 input1 = int(input("Enter amount1(in cent): "))
 input2 = int(input("Enter amount2(in cent): "))
 
