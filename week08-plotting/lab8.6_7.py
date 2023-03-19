@@ -5,6 +5,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+import pandas as pd
 
 min_s = 20000
 max_s = 80000
@@ -56,9 +57,13 @@ plt.legend()
 plt.savefig('prettier plot.png')
 #plt.show()
 
-salaries_ages = np.concatenate((ages, new_salaries), axis=0)
-print(salaries_ages)
+salaries_ages = np.stack((ages, new_salaries), axis=0)
+salaries_ages = salaries_ages.transpose()
+
+df = pd.DataFrame(salaries_ages, columns=["ages", "salaries"])
+
+# print(salaries_ages)
 # do seaborn plots
-#seaborn_data = sns.load_dataset(salaries_ages)
-sns.relplot(data=salaries_ages)
+sns.relplot(salaries_ages)
 sns.displot(norm_dist, kind="kde")
+
