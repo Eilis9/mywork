@@ -19,17 +19,17 @@ df.drop(columns=['dashl', 'userId'], inplace=True)
 
 df['time']= df['time'].apply(lambda x: re.search('[\w:/]+', x).group())
 
-print(df.dtypes)
+#print(df.dtypes)
 
 df['time'] = pd.to_datetime(df['time'], format='%d/%b/%Y:%H:%M:%S')
 
 #newdf = df.loc[(df['time'] > start_date) & (df['time'] < end_date)]
 df = df.set_index(['time'])
-newdf = df['2021/02/15 23:00':'2021/02/15 23:59:59']
+#newdf = df['2021/02/15 23:00':'2021/02/15 23:59:59']
 
-print(newdf)
+#print(newdf)
 downloadSamples = df['size of response'].resample(rule='30Min').mean()
-print(downloadSamples.head(5))
+#print(downloadSamples.head(5))
 
 
 #downloadSamples.plot()
@@ -38,13 +38,12 @@ print(downloadSamples.head(5))
 #downloadSamples_1H = df['size of response'].resample(rule='1H')
 df_hour_means = df['size of response'].resample(rule='1H').mean()
 df_roll_mean6 = df_hour_means.rolling(6).mean()
-
+#print(df_roll_mean6.head(10))
 df_roll_mean6.plot()
-plt.show()
+df_hour_means.plot()
 
-#downloadSamples_rm = downloadSamples_1H.rolling()
-#print(type(downloadSamples_1H))
-#df_rm.plot()
+print(df_hour_means.size)
+print(df_roll_mean6.size)
+
+plt.legend()
 #plt.show()
-
-
