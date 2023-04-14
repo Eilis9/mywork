@@ -1,11 +1,10 @@
-'''
-collatz.py
+""" collatz.py
 Author: Eilis Donohue
 week 4 assignment
 take a positive integer value
 apply collatz principle to it, appending each value to a list
 print the values of the list
-'''
+"""
 
 # define variable user_list as the list for the calculated values
 user_list = []
@@ -29,10 +28,12 @@ while user_inp != 1:
         user_inp = int((user_inp * 3) + 1)
     # appends the calculated value to the list    
     user_list.append(user_inp)
-
+#    print(user_inp, end=None)
 # print out the calculated values on the same line by looping over the values of user_list
-for item in user_list:
-    print(item, end=" ")
+#for item in user_list:
+#    print(item, end=" ")
 
 # goes to next line after printing the list of values
-print()
+#print()
+# other way of printing a list 
+print(*user_list)

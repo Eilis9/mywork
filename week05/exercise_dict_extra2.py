@@ -42,4 +42,6 @@ while len(student_name) != 0:
       
     student_input = dict(studentname = student_name, modules = module_input) 
     students.append(student_input)
-        
+
+
+print(students)        

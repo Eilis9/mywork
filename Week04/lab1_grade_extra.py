@@ -5,8 +5,9 @@ grade.py
 
 grade = float(input("Enter the percentage:"))
 
-grade = round(grade, 0)
+grade = round(grade)
 print(grade)
+
 if grade < 0 or grade > 100:
     print("invalid grade")
 elif grade < 40:
